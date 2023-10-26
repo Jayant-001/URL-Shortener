@@ -1,9 +1,8 @@
-'use client'
+"use client";
 import React from "react";
 import toast from "react-hot-toast";
 
 const ShortURLDetails = ({ shortenUrl, loading }) => {
-    
     const handleCopyToClipboard = (e) => {
         e.preventDefault();
 
@@ -23,7 +22,7 @@ const ShortURLDetails = ({ shortenUrl, loading }) => {
                         target="_blank"
                         href={`${process.env.NEXT_PUBLIC_SERVER_URL}/api/${shortenUrl}`}
                     >
-                        {shortenUrl}
+                        {`${process.env.NEXT_PUBLIC_SERVER_URL}/api/${shortenUrl}`}
                     </a>
                     <button
                         className="cursor-pointer bg-slate-400 px-2 py-1 rounded-lg active:opacity-40 "
