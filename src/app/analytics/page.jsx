@@ -1,6 +1,5 @@
 "use client";
 import AnalyticsDetails from "@/components/AnalyticsDetails";
-import ShortURLDetails from "@/components/ShortURLDetails";
 import axios from "axios";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -64,8 +63,37 @@ export default function AnalyticsPage() {
                 loading={mutation.isLoading}
             />
             <Link href="/" className="text-lg hover:underline hover:opacity-60">
-                Get your shorten URL
+                Get your <span className="font-semibold underline ">shorten URL</span>
             </Link>
+            <div>
+                <hr />  
+                <p className="text-sm sm:text-base">
+                    Designed and Developed by{" "}
+                    <a href="https://jayant-gupta.vercel.app/" target="_blank">
+                        <strong className="text-blue-500 hover:underline">
+                            Jayant
+                        </strong>
+                    </a>
+                </p>
+                <p className="text-sm sm:text-base">
+                    Get it on <a
+                        href="https://github.com/Jayant-001/URL-Shortener"
+                        target="_blank"
+                    >
+                        <strong className="text-blue-500 hover:underline">
+                            Github
+                        </strong>
+                    </a> Connect with me on{" "}
+                    <a
+                        href="https://www.linkedin.com/in/jayant-cse/"
+                        target="_blank"
+                    >
+                        <strong className="text-blue-500 hover:underline">
+                            LinkedIn
+                        </strong>
+                    </a>
+                </p>
+            </div>
         </div>
     );
 }

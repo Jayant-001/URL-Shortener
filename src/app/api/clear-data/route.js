@@ -1,23 +1,17 @@
-import { NextResponse } from "next/server"
-
+import { URL } from "@/models/URL";
+import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
-
     try {
+        await URL.deleteMany();
+        const allKeys = await redis.keys("*");
+        await redis.del(allKeys);
 
-        
-
-        // console.log(key)
-
-        // const allKeys = await redis.keys('*');
-        // // const data = await redis.mget(allKeys);
-
-        // console.log(allKeys)
-
-        // // const data = await redis.del(allKeys)
-        // // console.log(data);
-        
+        return NextResponse.json(
+            { message: "Database cleared" },
+            { status: 200 }
+        );
     } catch (error) {
-        return NextResponse.json({error: error.message}, {status: 500})
+        return NextResponse.json({ error: error.message }, { status: 500 });
     }
-}
+};

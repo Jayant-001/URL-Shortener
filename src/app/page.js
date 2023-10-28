@@ -16,7 +16,7 @@ export default function Home() {
             setShortenUrl(data.shortenURL.shortId);
         },
         onError: (error) => {
-            toast.error(error.message)
+            toast.error(error.message);
         },
     });
 
@@ -66,8 +66,37 @@ export default function Home() {
                 href="/analytics"
                 className="text-lg hover:underline hover:opacity-60"
             >
-                Get your URL analytics
+                Get your <span className="font-semibold underline ">URL</span> analytics
             </Link>
+            <div>
+                <hr />  
+                <p className="text-sm sm:text-base">
+                    Designed and Developed by{" "}
+                    <a href="https://jayant-gupta.vercel.app/" target="_blank">
+                        <strong className="text-blue-500 hover:underline">
+                            Jayant
+                        </strong>
+                    </a>
+                </p>
+                <p className="text-sm sm:text-base">
+                    Get it on <a
+                        href="https://github.com/Jayant-001/URL-Shortener"
+                        target="_blank"
+                    >
+                        <strong className="text-blue-500 hover:underline">
+                            Github
+                        </strong>
+                    </a> Connect with me on{" "}
+                    <a
+                        href="https://www.linkedin.com/in/jayant-cse/"
+                        target="_blank"
+                    >
+                        <strong className="text-blue-500 hover:underline">
+                            LinkedIn
+                        </strong>
+                    </a>
+                </p>
+            </div>
         </div>
     );
 }
