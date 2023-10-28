@@ -10,6 +10,7 @@ export default function Home() {
     const [url, setUrl] = useState("");
     const [shortenUrl, setShortenUrl] = useState("");
 
+    // Post request - `/api/url` body - {url} to get shorten id of long URL
     const mutation = useMutation({
         mutationFn: async () => axios.post("/api/url", { url }),
         onSuccess: ({ data }) => {
@@ -23,7 +24,7 @@ export default function Home() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (url.length < 3) {
+        if (url.length < 5) {
             toast.error("Invalid url");
             return;
         }

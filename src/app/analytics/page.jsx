@@ -54,7 +54,7 @@ export default function AnalyticsPage() {
                     <input
                         type="submit"
                         className="cursor-pointer bg-slate-400 md:rounded-r-lg px-2 py-2 "
-                        value="Shorten URL"
+                        value="Search"
                     />
                 </form>
             </div>

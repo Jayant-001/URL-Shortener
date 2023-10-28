@@ -23,7 +23,7 @@ const DeleteAllData = () => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 w-fit">
+        <div className="fixed bottom-0 right-0 w-fit">
             <p className="text-[#202125]" onClick={handleClick}>
                 Clear all data
             </p>
