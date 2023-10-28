@@ -54,7 +54,7 @@ export default function Home() {
                     />
                     <input
                         type="submit"
-                        className="cursor-pointer bg-slate-400 md:rounded-r-lg px-2 py-2 hover:opacity-60 "
+                        className="cursor-pointer bg-slate-400 sm:rounded-r-lg px-2 py-2 hover:opacity-60 "
                         value="Shorten URL"
                     />
                 </form>
