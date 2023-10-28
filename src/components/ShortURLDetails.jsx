@@ -3,6 +3,8 @@ import React from "react";
 import toast from "react-hot-toast";
 
 const ShortURLDetails = ({ shortenUrl, loading }) => {
+
+    // copy full shorten url to clipboard
     const handleCopyToClipboard = (e) => {
         e.preventDefault();
 
@@ -15,7 +17,7 @@ const ShortURLDetails = ({ shortenUrl, loading }) => {
     return (
         <div className="py-4 bg-[#393b3e] p-5 w-full shadow rounded-lg">
             {loading && (
-                <p className="text-center text-lg">
+                <p className="text-center text-lg my-2">
                     Shorting your URL. Please wait...
                 </p>
             )}

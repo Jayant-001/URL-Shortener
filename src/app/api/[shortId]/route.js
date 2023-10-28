@@ -9,12 +9,6 @@ export const GET = async (req, { params }) => {
     try {
         const { shortId } = await params;
 
-        const cache_value = await redis.get("short-url:" + shortId);
-
-        if (cache_value) {
-            return NextResponse.redirect(cache_value);
-        }
-
         const url = await URL.findOneAndUpdate(
             {
                 shortId,
@@ -33,6 +27,12 @@ export const GET = async (req, { params }) => {
                 { error: "Invalid shortId" },
                 { status: 404 }
             );
+        }
+
+        const cache_value = await redis.get("short-url:" + shortId);
+
+        if (cache_value) {
+            return NextResponse.redirect(cache_value);
         }
 
         return NextResponse.redirect(url.redirectURL);

@@ -4,7 +4,7 @@ const AnalyticsDetails = ({ analytics, loading }) => {
     return (
         <div className="py-4 bg-[#393b3e] p-5 w-full shadow rounded-lg">
             {loading && (
-                <p className="text-center text-lg">
+                <p className="text-center text-lg my-0">
                     Getting details. Please wait...
                 </p>
             )}

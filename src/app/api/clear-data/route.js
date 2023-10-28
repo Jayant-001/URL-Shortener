@@ -1,11 +1,16 @@
 import { URL } from "@/models/URL";
+import redis from "@/utils/redis";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
     try {
-        await URL.deleteMany();
-        const allKeys = await redis.keys("*");
-        await redis.del(allKeys);
+        const allKeys = await redis.keys("*"); // find all keys from redis database
+
+        if (allKeys.length > 0) {
+            await redis.del(allKeys); // delete all keys from redis databse
+        }
+
+        await URL.deleteMany({}); // delete all url documents from mongoDB databse
 
         return NextResponse.json(
             { message: "Database cleared" },
