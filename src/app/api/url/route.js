@@ -24,7 +24,7 @@ export const POST = async (req) => {
             visitHistory: [],
         });
 
-        await redis.set(shortId, url);
+        await redis.set("short-url:" + shortId, url);
 
         return NextResponse.json({ shortenURL }, { status: 200 });
     } catch (error) {

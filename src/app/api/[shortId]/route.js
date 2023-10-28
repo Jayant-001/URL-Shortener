@@ -9,7 +9,8 @@ export const GET = async (req, { params }) => {
     try {
         const { shortId } = await params;
 
-        const cache_value = await redis.get(shortId);
+        const cache_value = await redis.get("short-url:" + shortId);
+
         if (cache_value) {
             return NextResponse.redirect(cache_value);
         }

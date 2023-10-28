@@ -1,9 +1,17 @@
+import { URL } from "@/models/URL";
+import redis from "@/utils/redis";
 import { NextResponse } from "next/server";
 
-export const GET = async (req) => {
+export const POST = async (req) => {
     try {
 
-        return NextResponse.json({ message: "Analytics route" }, { status: 200 });
+        const {key} = await req.json();
+
+        const urlDetails = await URL.findOne({
+            shortId : key
+        })
+
+        return NextResponse.json({ analytics: urlDetails }, { status: 200 });
 
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
