@@ -1,6 +1,8 @@
 import { URL } from "@/models/URL";
-import redis from "@/utils/redis";
+import connectToDB from "@/utils/mongo";
 import { NextResponse } from "next/server";
+
+connectToDB();
 
 export const POST = async (req) => {
     try {

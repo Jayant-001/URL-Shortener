@@ -1,6 +1,9 @@
 import { URL } from "@/models/URL";
+import connectToDB from "@/utils/mongo";
 import redis from "@/utils/redis";
 import { NextResponse } from "next/server";
+
+connectToDB();
 
 export const GET = async (req) => {
     try {
