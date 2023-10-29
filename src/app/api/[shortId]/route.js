@@ -1,17 +1,17 @@
 import { URL } from "@/models/URL";
 import connectToDB from "@/utils/mongo";
-import redis from "@/utils/redis";
 import { NextResponse } from "next/server";
 
 connectToDB();
 
 export const GET = async (req, { params }) => {
     try {
-        const { shortId } = await params;
+        const { shortId } = await params; // extract shortId from URL
 
+        // update visited History -> push current timeing into visited history of URL
         const url = await URL.findOneAndUpdate(
             {
-                shortId,
+                shortId, // find by shortID
             },
             {
                 $push: {
@@ -22,6 +22,7 @@ export const GET = async (req, { params }) => {
             }
         );
 
+        // if can't get url -> Invalid URL
         if (!url) {
             return NextResponse.json(
                 { error: "Invalid shortId" },
@@ -29,12 +30,7 @@ export const GET = async (req, { params }) => {
             );
         }
 
-        const cache_value = await redis.get("short-url:" + shortId);
-
-        if (cache_value) {
-            return NextResponse.redirect(cache_value);
-        }
-
+        // redirect client to Original(long) URL
         return NextResponse.redirect(url.redirectURL);
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 200 });

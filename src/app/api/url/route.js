@@ -21,7 +21,7 @@ export const POST = async (req) => {
         // check url in cache memory
         let cache_data = await redis.get("url:" + url);
 
-        // if cache is available return cache to user
+        // if cache is available return cache data to client
         if (cache_data) {
             return NextResponse.json(
                 { shortenURL: JSON.parse(cache_data), cache_status: "hit" },
