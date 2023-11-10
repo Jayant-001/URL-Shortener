@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# URL Shortener Project
 
-## Getting Started
+## Overview
+This project is a URL shortener web application that allows users to create short URLs for long links. It features Redis caching for improved performance, analytics to track short URL clicks, and seamless redirection from short to long URLs.
 
-First, run the development server:
+## Features
+- **Short URL Generation:** Easily create short URLs for long links.
+- **Redis Caching:** Utilizes Redis to cache user requests for quicker response times.
+- **Redirection:** When users enter a short URL, they are redirected to the corresponding long URL.
+- **Analytics:** Provides insights into short URL usage, including click timestamps and total clicks.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **Frontend:** Next.js, Tailwind CSS, React.js, React Query, Axios, IO Redis, React hot toast
+- **Backend:** Node.js, nanoid (to generate a unique ID)
+- **Database:** Mongo DB
+- **Caching:** Redis
+- **Other Technologies:** [Any other technologies or libraries used]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
+1. Clone the repository: `git clone https://github.com/Jayant-001/URL-Shortener`
+2. Install dependencies: `npm install` or `yarn install`
+3. Configure environment variables.
+4. Run the application: `npm run dev` or `yarn run dev`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
+- To create a short URL, [describe the process].
+- To access analytics, [provide instructions on how users can view analytics].
+- ...
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contribution
+Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the [Specify License] - see the [LICENSE.md](LICENSE.md) file for details.
