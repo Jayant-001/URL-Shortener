@@ -22,6 +22,15 @@ This project is a URL shortener web application that allows users to create shor
 3. Configure environment variables provided in `.env.example` file.
 4. Run the application: `npm run dev` or `yarn run dev`
 
+
+### Environment Variables
+
+1. REDIS_URL
+2. SERVER_URL
+3. NEXT_PUBLIC_SERVER_URL
+4. MONGO_URL
+
+
 ## Usage
 - To create a short URL, Go to https://shorturl-01.vercel.app, Paste long URL and click on `Shorten URL` button to get short URL.
 - To access analytics, click on `Get your URL analytics` on Home page or go to https://shorturl-01.vercel.app/analytics, paste your short key and click on `Search` button.
@@ -30,5 +39,14 @@ This project is a URL shortener web application that allows users to create shor
 ## Contribution
 Contributions are welcome!
 
-## License
-This project is licensed under the [Specify License] - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Feedback
+
+If you have any feedback, please reach out to me at jayant.gupta.dln@gmail.com
+
+##
+
+Connect with us:
+- Email: [jayant.gupta.dln@gmail.com](jayant.gupta.dln@gmail.com)
+- LinkedIn: [@jayant-cse](https://www.linkedin.com/in/jayant-cse/)
+- Website: [https://jayant-gupta.vercel.app](https://jayant-gupta.vercel.app)
