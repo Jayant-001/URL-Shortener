@@ -14,12 +14,12 @@ This project is a URL shortener web application that allows users to create shor
 - **Backend:** Node.js, nanoid (to generate a unique ID)
 - **Database:** Mongo DB
 - **Caching:** Redis
-- **Other Technologies:** [Any other technologies or libraries used]
+- **Other Technologies:** ESLint
 
 ## Setup Instructions
 1. Clone the repository: `git clone https://github.com/Jayant-001/URL-Shortener`
 2. Install dependencies: `npm install` or `yarn install`
-3. Configure environment variables.
+3. Configure environment variables provided in `.env.example` file.
 4. Run the application: `npm run dev` or `yarn run dev`
 
 ## Usage
@@ -28,7 +28,7 @@ This project is a URL shortener web application that allows users to create shor
 - ...
 
 ## Contribution
-Contributions are welcome!
+Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
 ## License
 This project is licensed under the [Specify License] - see the [LICENSE.md](LICENSE.md) file for details.
