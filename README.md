@@ -23,12 +23,12 @@ This project is a URL shortener web application that allows users to create shor
 4. Run the application: `npm run dev` or `yarn run dev`
 
 ## Usage
-- To create a short URL, [describe the process].
-- To access analytics, [provide instructions on how users can view analytics].
-- ...
+- To create a short URL, Go to https://shorturl-01.vercel.app, Paste long URL and click on `Shorten URL` button to get short URL.
+- To access analytics, click on `Get your URL analytics` on Home page or go to https://shorturl-01.vercel.app/analytics, paste your short key and click on `Search` button.
+
 
 ## Contribution
-Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUTING.md).
+Contributions are welcome!
 
 ## License
 This project is licensed under the [Specify License] - see the [LICENSE.md](LICENSE.md) file for details.
