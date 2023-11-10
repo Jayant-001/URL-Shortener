@@ -28,7 +28,7 @@ This project is a URL shortener web application that allows users to create shor
 - ...
 
 ## Contribution
-Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUTING.md).
+Contributions are welcome!
 
 ## License
 This project is licensed under the [Specify License] - see the [LICENSE.md](LICENSE.md) file for details.
